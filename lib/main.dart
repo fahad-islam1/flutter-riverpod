@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:riverpod_practice_project/provider/provider1.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_practice_project/provider/methods/provider1.dart';
+import 'package:riverpod_practice_project/provider/state_provider_screen.dart';
 
+// provider 
+final nameProvider=Provider<String>((ref)=>"fahad Islam");
+// stateprovider 
+final counterProvider = StateProvider<int>((ref) {
+  return 0 ;
+});
 void main() {
-  runApp(const MyApp());
+  runApp( ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -32,7 +40,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Provider1Screen(),
+      home: CounterScreen(),
       
     );
   }
