@@ -1,7 +1,13 @@
-class  UserModel {
-  final String name ;
-  final int age ;
+class User {
+  final String name;
+  final int age;
 
-  UserModel(this.name, this.age);
+  User({required this.name, required this.age});
 
+  User copyWith({String? name, int? age}) {
+    return User(
+      name: name ?? this.name,
+      age: age ?? this.age,
+    );
+  }
 }
