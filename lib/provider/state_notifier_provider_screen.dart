@@ -23,6 +23,9 @@ class _StateNotifierProviderScreenState extends ConsumerState<StateNotifierProvi
   Widget build(BuildContext context) {
     final user=ref.watch(userProvider);
     print('widget rebuild ');
+    // so we dont want to widget rebuild thats why we use select method 
+    final username=ref.watch(userProvider.select((value)=>value.name));
+
     return Scaffold(
       appBar: AppBar(title: Text("Provider type 3 state notifier provider "),),
       body: Center(
@@ -55,7 +58,7 @@ class _StateNotifierProviderScreenState extends ConsumerState<StateNotifierProvi
             SizedBox(
               height: 20,
             ),
-            Text("Your name is ${user.name}"),
+            Text("Your name is $username"),
             Text("Your age is ${user.age}"),
 
           ],
