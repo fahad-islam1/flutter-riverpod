@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_practice_project/change_notifier_screen.dart';
 import 'package:riverpod_practice_project/provider/methods/provider1.dart';
-import 'package:riverpod_practice_project/provider/state_notifier_provider_screen.dart';
-import 'package:riverpod_practice_project/provider/state_provider_screen.dart';
+import 'package:riverpod_practice_project/state_notifier_provider_screen.dart';
+import 'package:riverpod_practice_project/state_provider_screen.dart';
+import 'package:riverpod_practice_project/provider/user_change_notiier_provider.dart';
 import 'package:riverpod_practice_project/provider/user_state_notifier_provider.dart';
 import 'package:riverpod_practice_project/user_model.dart';
 
@@ -16,6 +18,9 @@ final counterProvider = StateProvider<int>((ref) {
 final userProvider = StateNotifierProvider<UserStateNotifier,User>((ref) {
   return UserStateNotifier();
 });
+// change notifier provider 
+final userChangeNotifierprovider=ChangeNotifierProvider((ref)=>UserChangeNotiierProvider());
+
 void main() {
   runApp( ProviderScope(child: MyApp()));
 }
@@ -47,7 +52,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: StateNotifierProviderScreen(),
+      home: UserChangenotifierProvider(),
       
     );
   }
