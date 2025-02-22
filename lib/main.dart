@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_practice_project/change_notifier_screen.dart';
-import 'package:riverpod_practice_project/provider/methods/provider1.dart';
-import 'package:riverpod_practice_project/state_notifier_provider_screen.dart';
-import 'package:riverpod_practice_project/state_provider_screen.dart';
+
 import 'package:riverpod_practice_project/provider/user_change_notiier_provider.dart';
 import 'package:riverpod_practice_project/provider/user_state_notifier_provider.dart';
 import 'package:riverpod_practice_project/user_model.dart';
@@ -20,6 +18,11 @@ final userProvider = StateNotifierProvider<UserStateNotifier,User>((ref) {
 });
 // change notifier provider 
 final userChangeNotifierprovider=ChangeNotifierProvider((ref)=>UserChangeNotiierProvider());
+// future provider 
+// stream provider 
+
+
+
 
 void main() {
   runApp( ProviderScope(child: MyApp()));
@@ -32,7 +35,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Riverpod App',
       theme: ThemeData(
         // This is the theme of your application.
         //
