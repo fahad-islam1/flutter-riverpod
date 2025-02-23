@@ -7,7 +7,6 @@ class Provider1Screen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final String name =ref.watch(nameProvider); 
     final String nameread =ref.watch(nameProvider); 
 
     // ref.watch use in the build method for listening and ref.read use when we are out of build method like in the statefull method
