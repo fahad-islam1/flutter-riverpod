@@ -40,6 +40,6 @@ class CounterScreen extends ConsumerWidget {
           ],
         ),
       ),
-    );;
+    );
   }
 }

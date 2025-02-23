@@ -63,6 +63,6 @@ class _StateNotifierProviderScreenState extends ConsumerState<UserChangenotifier
           ],
         ),
       ),
-    );;
+    );
   }
 }
