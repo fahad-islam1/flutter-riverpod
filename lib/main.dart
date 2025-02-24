@@ -14,6 +14,7 @@ final counterProvider = StateProvider<int>((ref) {
 });
 // state notifire provider
 final userProvider = StateNotifierProvider<UserStateNotifier,User>((ref) {
+  ref.keepAlive();
   return UserStateNotifier();
 });
 // change notifier provider 
