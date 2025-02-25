@@ -21,7 +21,7 @@ final userProvider = StateNotifierProvider<UserStateNotifier,User>((ref) {
 final userChangeNotifierprovider=ChangeNotifierProvider((ref)=>UserChangeNotiierProvider());
 // future provider 
 // stream provider 
-
+//nice 
 
 
 
