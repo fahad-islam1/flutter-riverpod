@@ -64,6 +64,15 @@ class _StateNotifierProviderScreenState extends ConsumerState<StateNotifierProvi
             ),
          
             Text("Your age is ${user.age}"),
+            SizedBox(
+              height: 20,
+            ),
+            Text("Your name is $username"),
+              SizedBox(
+              height: 20,
+            ),
+         
+            Text("Your age is ${user.age}"),
 
           ],
         ),
