@@ -43,7 +43,7 @@ class _StateNotifierProviderScreenState extends ConsumerState<StateNotifierProvi
                 updateUSerName(value);
               },
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             TextField(
               decoration: InputDecoration(
                 labelText: "Enter your age",
