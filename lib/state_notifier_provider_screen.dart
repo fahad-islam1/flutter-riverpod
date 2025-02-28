@@ -27,7 +27,7 @@ class _StateNotifierProviderScreenState extends ConsumerState<StateNotifierProvi
     final username=ref.watch(userProvider.select((value)=>value.name));
 
     return Scaffold(
-      appBar: AppBar(title: Text("Provider type 3 state notifier provider "),),
+      appBar: AppBar(title: Text("Provider type: 3 state notifier provider "),),
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
