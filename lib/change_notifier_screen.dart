@@ -58,6 +58,7 @@ class _StateNotifierProviderScreenState extends ConsumerState<UserChangenotifier
               height: 20,
             ),
             Text("Your name is ${user.name}"),
+            
             Text("Your age is ${user.age}"),
 
           ],

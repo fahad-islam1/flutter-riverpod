@@ -58,6 +58,7 @@ class _StateNotifierProviderScreenState extends ConsumerState<StateNotifierProvi
             SizedBox(
               height: 20,
             ),
+            
             Text("Your name is $username"),
               SizedBox(
               height: 10,

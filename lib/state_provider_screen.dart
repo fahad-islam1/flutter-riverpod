@@ -10,7 +10,7 @@ class CounterScreen extends ConsumerWidget {
 
     final number = ref.watch(counterProvider);
     return Scaffold(
-      appBar: AppBar(title: Text("Provider type 2 :State notiifier provider "),),
+      appBar: AppBar(title: Text("Provider type: 2 State notiifier provider "),),
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -21,6 +21,7 @@ class CounterScreen extends ConsumerWidget {
             // button
             ElevatedButton(child: Text("add"),onPressed: (){
               ref.read(counterProvider.notifier).state++;
+
               // ref.read(counterProvider.notifier).update((state)=>10);
 
             },),
@@ -34,6 +35,7 @@ class CounterScreen extends ConsumerWidget {
             ),
    ElevatedButton(child: Text("Minus"),onPressed: (){
               ref.read(counterProvider.notifier).state--;
+
               // ref.read(counterProvider.notifier).update((state)=>10);
 
             },),
