@@ -23,6 +23,7 @@ class _StateNotifierProviderScreenState extends ConsumerState<UserChangenotifier
   Widget build(BuildContext context) {
     final user=ref.watch(userChangeNotifierprovider).user;
     print('widget rebuild ');
+    
     // so we dont want to widget rebuild thats why we use select method 
 
     return Scaffold(
